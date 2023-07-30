@@ -44,5 +44,5 @@ if submit:
     for i,j in output.items():
         c1,c2 = st.columns(2)
         with c1: st.success(i)
-        with c2: st.code(j)
+        with c2: st.code(str(j[0]))
         
