@@ -37,10 +37,12 @@ submit = st.button("Submit")
 if submit:
     input_image = Image.open(input_image)
     input_image.save("demo.png")
+    st.subheader("Input image ")
     st.image(input_image,width=500)
     test_image = r"demo.png"
     output = predict_height_width_BMI(test_image,height_model,weight_model,bmi_model)
 
+    st.subheader("Results : ")
     for i,j in output.items():
         c1,c2 = st.columns(2)
         with c1: st.success(i)
