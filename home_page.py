@@ -9,9 +9,9 @@ st.set_page_config("BMI Calculator App","👨‍💻")
 st.title("BMI Calculator App")
 
 
-height_model = joblib.load('models\height_model.joblib')
-weight_model = joblib.load('models\weight_model.joblib')
-bmi_model = joblib.load('models//bmi_model.joblib')
+height_model = joblib.load('height_model.joblib')
+weight_model = joblib.load('weight_model.joblib')
+bmi_model = joblib.load('bmi_model.joblib')
 
 def get_face_encoding(image_path):
     picture_of_me = face_recognition.load_image_file(image_path)
